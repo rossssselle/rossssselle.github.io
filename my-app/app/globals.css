@@ -1,0 +1,13 @@
+
+
+body {
+background-color: #161616;
+}
+
+.spline {
+  position: fixed; /* Keeps the element in the viewport regardless of scroll */
+  top: 50%; /* Moves the top edge to the vertical center */
+  left: 50%; /* Moves the left edge to the horizontal center */
+  transform: translate(-50%, -50%);
+}
+
