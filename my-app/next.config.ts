@@ -5,9 +5,8 @@ const nextConfig: NextConfig = {
   output: 'export',
   images: { unoptimized: true },
   trailingSlash: true,
-  // // optional: if deploying under username.github.io/repo
-  // basePath: '/rossssselle.github.io',
-  // assetPrefix: '/rossssselle.github.io/',
+
+
 
 };
 
