@@ -1,3 +1,4 @@
+/* [project]/app/globals.css [app-client] (css) */
 body {
   background-color: #f9fafb;
 }
@@ -5,144 +6,137 @@ body {
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
 }
 
 .container {
-  display: flex;
-  height: 100vh;
   background-color: #f9fafb;
+  height: 100vh;
+  display: flex;
+}
 
-  @media screen and (min-width: 400px) {
+@media screen and (min-width: 400px) {
+  .container {
     flex-direction: row;
   }
 }
 
-
-/* Navbar Styles */
 .navbar {
-  min-width: 200px;
-  flex-shrink: 0;
+  color: #fff;
   background-color: #f9fafb;
-  color: white;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: end;
+  min-width: 200px;
   padding: 24px;
   display: flex;
-  flex-direction: column;
-  align-items: end;
-  justify-content: center;
 }
 
 .navbar h1 {
+  margin-bottom: 32px;
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 32px;
 }
 
 .nav-list {
-  list-style: none;
-  display: flex;
   flex-direction: column;
   gap: 8px;
+  list-style: none;
+  display: flex;
 }
 
 .nav-button {
-  width: 100%;
-  display: flex;
+  color: #000;
+  cursor: pointer;
+  text-transform: lowercase;
+  background: #e2f171;
+  border: 1px solid #161616;
   align-items: center;
   gap: 12px;
-  padding: 12px 16px;
-  border: 1px solid #161616;
-  background: none;
-  color: black;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  text-transform: lowercase;
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #E2F171;
-  box-shadow: 5px 5px #161616;
+  width: 100%;
   margin: 10px;
+  padding: 12px 16px;
+  font-family: Courier New, Courier, monospace;
+  font-size: 16px;
+  transition: top .6s;
+  display: flex;
   position: relative;
   bottom: 0;
-  transition: top ease 0.6s;
+  box-shadow: 5px 5px #161616;
 }
 
 .nav-button:hover {
   bottom: -3px;
 }
 
-
-/* Main Content Area */
 .main-content {
   flex: 1;
   display: flex;
   overflow: hidden;
 }
 
-/* Content Panel */
 .content-panel {
   background-color: #f9fafb;
-  overflow: hidden;
   flex-shrink: 0;
-  transition: width 0.5s ease-in-out;
+  transition: width .5s ease-in-out;
+  overflow: hidden;
 }
 
 .content-panel.hidden {
+  align-items: center;
   width: 0;
   display: flex;
-  align-items: center;
 }
 
 .content-panel.visible {
+  align-items: center;
   width: 40%;
   display: flex;
-  align-items: center;
 }
 
 .content-inner {
-  background-color: white;
+  background-color: #fff;
+  border: 1px solid #161616;
+  width: 100%;
+  margin: 20px;
   padding: 20px;
   overflow: auto;
-  border: 1px solid #161616;
   box-shadow: 5px 5px #161616;
-  margin: 20px;
-  width: 100%;
 }
 
 .content-inner h2 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 24px;
   color: #161616;
   text-transform: lowercase;
+  margin-bottom: 24px;
+  font-size: 36px;
+  font-weight: bold;
 }
 
 .content-inner p {
-  font-size: 16px;
-  line-height: 1.7;
   color: #161616;
   margin-bottom: 16px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Courier New, Courier, monospace;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
-/* Contact Styles */
 .contact-links {
-  display: flex;
   flex-direction: column;
   gap: 16px;
   margin-top: 32px;
+  display: flex;
 }
 
 .contact-link {
-  display: flex;
+  color: inherit;
+  background-color: #f9fafb;
+  border-radius: 8px;
   align-items: center;
   gap: 12px;
   padding: 16px;
-  background-color: #f9fafb;
-  border-radius: 8px;
   text-decoration: none;
-  color: inherit;
-  transition: background-color 0.2s;
+  transition: background-color .2s;
+  display: flex;
 }
 
 .contact-link:hover {
@@ -154,92 +148,86 @@ body {
 }
 
 .contact-info {
-  display: flex;
   flex-direction: column;
+  display: flex;
 }
 
 .contact-label {
-  font-weight: 600;
   margin-bottom: 2px;
+  font-weight: 600;
 }
 
 .contact-value {
   color: #6b7280;
-  font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
-/* Photo Section */
 .photo-section {
+  flex: 1;
   position: relative;
-  flex: 1;
 }
 
-.photo-section.full {
-  flex: 1;
-}
-
-.photo-section.half {
+.photo-section.full, .photo-section.half {
   flex: 1;
 }
 
 .photo-content {
+  background-color: #f9fafb;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   position: absolute;
   inset: 0;
-  background-color: #f9fafb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .photo-placeholder {
   text-align: center;
-  color: white;
+  color: #fff;
   width: 100%;
+}
 
-  canvas {
-    width: 100% !important;
-    height: auto !important;
-    display: flex;
-  }
+.photo-placeholder canvas {
+  display: flex;
+  width: 100% !important;
+  height: auto !important;
 }
 
 .photo-circle {
+  background-color: #fff3;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
   width: 256px;
   height: 256px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
   margin: 0 auto 24px;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .photo-name {
+  margin-bottom: 8px;
   font-size: 36px;
   font-weight: bold;
-  margin-bottom: 8px;
 }
 
 .photo-title {
+  opacity: .9;
   font-size: 20px;
-  opacity: 0.9;
 }
 
-/* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
   }
 
   .navbar {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
     min-width: 100%;
     height: auto;
     padding: 16px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
   }
 
   .navbar h1 {
@@ -253,11 +241,8 @@ body {
   }
 
   .nav-button {
-    font-size: 16px;
-
+    font-size: 14px;
   }
-
-
 
   .main-content {
     flex-direction: column;
@@ -265,10 +250,10 @@ body {
   }
 
   .content-panel {
-    width: 100% !important;
     height: auto;
     max-height: 50vh;
-    transition: max-height 0.5s ease-in-out, width 0s;
+    transition: max-height .5s ease-in-out, width;
+    width: 100% !important;
   }
 
   .content-panel.hidden {
@@ -282,13 +267,13 @@ body {
   }
 
   .content-inner {
-    padding: 20px;
     margin: 10px;
+    padding: 20px;
   }
 
   .content-inner h2 {
-    font-size: 28px;
     margin-bottom: 16px;
+    font-size: 28px;
   }
 
   .content-inner p {
@@ -325,3 +310,5 @@ body {
     padding: 12px;
   }
 }
+
+/*# sourceMappingURL=app_globals_71f961d1.css.map*/
