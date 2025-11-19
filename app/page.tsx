@@ -22,7 +22,7 @@ export default function Home() {
             <div className="content-inner">
               <h2>About Me</h2>
               <p>
-                I’m Zellie (she/they): Software Engineer, STEM educator, and creative human who can build an app, write music, or sew an outfit—depending on the day.
+                I’m Zellie (she/they): Software Engineer, STEM educator, and creative human who can build an app, write music, or sew an outfit—depending on the day. Born and raised in Seattle, WA and now gallivanting in Brooklyn, NY.
               </p>
               <p>
                 With 4+ years in full-stack development (React, JavaScript, Go), I focus on making web experiences simple, scalable, and genuinely enjoyable.
