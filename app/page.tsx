@@ -25,7 +25,7 @@ export default function Home() {
                 I’m Zellie (she/they): Software Engineer, STEM educator, and creative human who can build an app, write music, or sew an outfit—depending on the day. Born and raised in Seattle, WA and now gallivanting in Brooklyn, NY.
               </p>
               <p>
-                With 4+ years in full-stack development (React, JavaScript, Go), I focus on making web experiences simple, scalable, and genuinely enjoyable.
+                With 7+ years in full-stack development (React, JavaScript, Go), I focus on making web experiences simple, scalable, and genuinely enjoyable.
                 I also teach computer science at The Parris Foundation, where I mentor students and help them build confidence through tech.
               </p>
               <p>
