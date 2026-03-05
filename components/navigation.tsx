@@ -1,11 +1,15 @@
-export default function Navigation({ activeSection, onSectionChange }: {
+export default function Navigation({
+  activeSection,
+  onSectionChange,
+}: {
   activeSection: string;
   onSectionChange: (section: string) => void;
 }) {
   const navItems = [
-    { id: 'home', label: 'Home', },
-    { id: 'about', label: 'About', },
-    { id: 'contact', label: 'Contact', },
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "contact", label: "Contact" },
+    { id: "ai", label: "Zellie AI" },
   ];
 
   return (
@@ -16,7 +20,7 @@ export default function Navigation({ activeSection, onSectionChange }: {
             <li key={item.id}>
               <button
                 onClick={() => onSectionChange(item.id)}
-                className={`nav-button ${activeSection === item.id ? 'active' : ''}`}
+                className={`nav-button ${activeSection === item.id ? "active" : ""}`}
               >
                 <span>{item.label}</span>
               </button>
