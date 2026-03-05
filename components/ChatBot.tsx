@@ -9,9 +9,9 @@ const API_URL =
 
 const SUGGESTED_QUESTIONS = [
   "What's your tech stack?",
-  "Tell me about your experience",
   "Are you open to new roles?",
-  "What projects are you most proud of?",
+  "Tell me about your band!",
+  "What are some of your hobbies?",
 ];
 
 // ─── TYPES ──────────────────────────────────────────────────────────────────
