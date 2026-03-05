@@ -108,6 +108,13 @@ export default function ChatBot() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading]);
 
+  useEffect(() => {
+    const ping = () => fetch(`${API_URL}/health`).catch(() => {});
+    ping(); // ping immediately on load
+    const interval = setInterval(ping, 10 * 60 * 1000); // then every 10 min
+    return () => clearInterval(interval);
+  }, []);
+
   const sendMessage = async (text: string) => {
     const trimmed = text.trim();
     if (!trimmed || loading) return;
